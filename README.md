@@ -105,7 +105,9 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
   1. Click **View instances**. The first EC2 instance is now under creation. When it will be ready, it will have a Public IP assigned
   1. Copy/Paste the public IP Address in your browser. You should see the message **"Hello Cloud Talkers. My Web Server address is: 10.0.1.xx"**
   1. Summary:
+  
     ![VPC Diagram - Step 1](./images/VPC Diagram 1.jpeg)
+
     1. We've created one EC2 instance **myWebServer** into the VPC **myCloudCornerVPC** and the subnet **10.0.1.0-eu-west-1a**
     1. We've created a launch script that applies security patches, installs httpd server and displays the private IP address of the EC2 instance
     1. We've created a security group **WebDMZ** used by the EC2 instance in the public subnet that's allowing HTTP (port 80) and SSH (port 22) traffics from the world.
@@ -174,21 +176,21 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
   1. Edit the key pair content and copy it in the clipboard
   1. Enter
 
-    ```bash
+```bash
     chmod 0600 keyPair.pem
     ssh ec2-user@<publicIP> -i <keyPair.pem>
-    ```
+```
   1. Create a file keyPair.pem and paste the key pair from the clipboard
   1. Enter
 
-    ```bash
+```bash
     # Replace x by the private IP address of the EC2 instance deployed in the private subnet
     ssh ec2-user@10.0.2.x -i <keyPair.pem>
-    ```
-    ```bash
+```
+```bash
     sudo su
     yum update -y
-    ```
+```
   1. The *yum update -y* command doesn't work. It's because the private subnet has no internet access
   1. There is 2 ways to allow internet access from the private subnet:
     1. Deploy a NAT instance (old fashion, not scalable)
@@ -208,14 +210,14 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
   1. Go back to the terminal window already connected to EC2 instance in the private subnet
   1. Enter
 
-    ```bash
+```bash
     # Replace x by the private IP address of the EC2 instance deployed in the private subnet
     ssh ec2-user@10.0.2.x -i <keyPair.pem>
-    ```
-    ```bash
+```
+```bash
     sudo so
     yum update -y
-    ```
+```
   1. The *yum update -y* command is now working.
   1. Summary:
     ![VPC Diagram - Step 2](./images/VPC Diagram 3.jpeg)
