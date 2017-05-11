@@ -213,8 +213,8 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     sudo su
     yum update -y
 ```
-    1. The *yum update -y* command is now working.
-    1. Summary:
+   1. The *yum update -y* command is now working.
+   1. Summary:
     ![VPC Diagram - Step 2](images/VPCDiagram3.jpeg)
       1. We've created a NAT Gateway into the public subnet **10.0.1.0-eu-west-1a**
       1. We've added a route in the default route table to allow traffic out to the internet through the NAT Gateway
