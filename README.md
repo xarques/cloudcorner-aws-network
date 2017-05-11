@@ -2,6 +2,8 @@
 Prerequisites:
 - You must have a valid AWS account
 
+This workshop has been inspired by the aCloudGuru course [Certified Solutions Architect - Associate 2017](https://acloud.guru/course/aws-certified-solutions-architect-associate/dashboard)
+
 ## Create a private network in the Cloud: Virtual Private Cloud (VPC)
 
 ### VPC - [AWS Definition](https://aws.amazon.com/vpc/):
@@ -9,9 +11,9 @@ Prerequisites:
 Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the Amazon Web Services (AWS) cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.  You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications.
 
 1. First, we need to create a VPC
-  1. From the AWS console, go to **Networking** -> **VPC**
-  1. Got to **Your VPCs** and click **Create VPC**
-  1. Enter
+    1. From the AWS console, go to **Networking** -> **VPC**
+    1. Got to **Your VPCs** and click **Create VPC**
+    1. Enter
     - Name tag: **myCloudCornerVPC**
     - IPv4 CIDR block: **10.0.0.0/16**
     - Tenancy: **Default**
