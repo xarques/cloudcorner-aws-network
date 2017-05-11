@@ -105,9 +105,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
   1. Click **View instances**. The first EC2 instance is now under creation. When it will be ready, it will have a Public IP assigned
   1. Copy/Paste the public IP Address in your browser. You should see the message **"Hello Cloud Talkers. My Web Server address is: 10.0.1.xx"**
   1. Summary:
-  
-    ![VPC Diagram - Step 1](./images/VPC Diagram 1.jpeg)
-
+    ![VPC Diagram - Step 1](images/VPC Diagram 1.jpeg)
     1. We've created one EC2 instance **myWebServer** into the VPC **myCloudCornerVPC** and the subnet **10.0.1.0-eu-west-1a**
     1. We've created a launch script that applies security patches, installs httpd server and displays the private IP address of the EC2 instance
     1. We've created a security group **WebDMZ** used by the EC2 instance in the public subnet that's allowing HTTP (port 80) and SSH (port 22) traffics from the world.
