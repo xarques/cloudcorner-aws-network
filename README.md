@@ -78,7 +78,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     - Subnet: **10.0.1.0-eu-west-1a**
   1. Open the **Advanced Details** section and copy paste
 
-    ```bash
+```bash
     #!/bin/bash
     yum update -y
     yum install httpd -y
@@ -86,7 +86,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     chkconfig httpd on
     echo "Hello Cloud Talkers. My Web Server address is: " > /var/www/html/index.html
     curl http://169.254.169.254/latest/meta-data/local-ipv4 >>  /var/www/html/index.html
-    ```
+```
   1. Click **Next:Add Storage**
   1. Click **Next:Tag Instance** and Enter:
     - Value tag: **myWebServer**
