@@ -79,7 +79,6 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
       - Network: **myCloudCornerVPC**
       - Subnet: **10.0.1.0-eu-west-1a**
     1. Open the **Advanced Details** section and copy paste
-
 ```bash
     #!/bin/bash
     yum update -y
@@ -148,7 +147,6 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     1. Open a terminal
     1. Make sure your SSH key is available and is protected against write (chmod 0600)
     1. Enter
-
 ```bash
     ssh ec2-user@<publicIP> -i <keyPair.pem>
 ```
@@ -175,14 +173,12 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     1. Open a terminal
     1. Edit the key pair content and copy it in the clipboard
     1. Enter
-
 ```bash
     chmod 0600 keyPair.pem
     ssh ec2-user@<publicIP> -i <keyPair.pem>
 ```
     1. Create a file keyPair.pem and paste the key pair from the clipboard
     1. Enter
-
 ```bash
     # Replace x by the private IP address of the EC2 instance deployed in the private subnet
     ssh ec2-user@10.0.2.x -i <keyPair.pem>
@@ -209,13 +205,12 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     1. Click **Save**
     1. Go back to the terminal window already connected to EC2 instance in the private subnet
     1. Enter
-
 ```bash
     # Replace x by the private IP address of the EC2 instance deployed in the private subnet
     ssh ec2-user@10.0.2.x -i <keyPair.pem>
 ```
 ```bash
-    sudo so
+    sudo su
     yum update -y
 ```
     1. The *yum update -y* command is now working.
