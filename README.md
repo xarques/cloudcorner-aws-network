@@ -139,7 +139,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     - acknowledge and click **Launch Instance**
   1. Click **View instances**. The second EC2 instance is now under creation. When it will be ready, it will NOT have a Public IP assigned
   1. Summary:
-    ![VPC Diagram - Step 2](./images/VPC Diagram 2.jpeg)
+![VPC Diagram - Step 2](./images/VPC Diagram 2.jpeg)
     1. We've created one EC2 instance **mySQLServer** into the VPC **myCloudCornerVPC** and the subnet **10.0.1.0-eu-west-1b**
     1. We've created 1 security group **RDSSG** in the private subnet that's allowing HTTP (port 80), SSH (port 22) and ICMP (ports 0 to 65535) traffics from the address range **1.0.1.0/24.1**
 1. SSH private instance from the public subnet
@@ -147,15 +147,15 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
   1. Make sure your SSH key is available and is protected against write (chmod 0600)
   1. Enter
 
-    ```bash
+```bash
     ssh ec2-user@<publicIP> -i <keyPair.pem>
-    ```
-    ```bash
+```
+```bash
     sudo su
     # ping privateIP of EC2 instance located in private subnet
     ping 10.0.2.x
     Ctrl C
-    ```
+```
   1. You should be able to ping the private instance
   1. From the AWS console, go to **Networking** -> **VPC**
   1. Got to **Security Groups**, select **RDSSG** security group, go to folder **Inbound Rules** and click **Edit**
