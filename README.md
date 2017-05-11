@@ -105,7 +105,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
   1. Click **View instances**. The first EC2 instance is now under creation. When it will be ready, it will have a Public IP assigned
   1. Copy/Paste the public IP Address in your browser. You should see the message **"Hello Cloud Talkers. My Web Server address is: 10.0.1.xx"**
   1. Summary:
-    ![VPC Diagram - Step 1](images/VPC Diagram 1.jpeg)
+    ![VPC Diagram - Step 1](images/VPCDiagram1.jpeg)
     1. We've created one EC2 instance **myWebServer** into the VPC **myCloudCornerVPC** and the subnet **10.0.1.0-eu-west-1a**
     1. We've created a launch script that applies security patches, installs httpd server and displays the private IP address of the EC2 instance
     1. We've created a security group **WebDMZ** used by the EC2 instance in the public subnet that's allowing HTTP (port 80) and SSH (port 22) traffics from the world.
@@ -139,7 +139,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
     - acknowledge and click **Launch Instance**
   1. Click **View instances**. The second EC2 instance is now under creation. When it will be ready, it will NOT have a Public IP assigned
   1. Summary:
-![VPC Diagram - Step 2](./images/VPC Diagram 2.jpeg)
+![VPC Diagram - Step 2](images/VPCDiagram2.jpeg)
     1. We've created one EC2 instance **mySQLServer** into the VPC **myCloudCornerVPC** and the subnet **10.0.1.0-eu-west-1b**
     1. We've created 1 security group **RDSSG** in the private subnet that's allowing HTTP (port 80), SSH (port 22) and ICMP (ports 0 to 65535) traffics from the address range **1.0.1.0/24.1**
 1. SSH private instance from the public subnet
@@ -218,7 +218,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
 ```
   1. The *yum update -y* command is now working.
   1. Summary:
-    ![VPC Diagram - Step 2](./images/VPC Diagram 3.jpeg)
+    ![VPC Diagram - Step 2](images/VPCDiagram3.jpeg)
     1. We've created a NAT Gateway into the public subnet **10.0.1.0-eu-west-1a**
     1. We've added a route in the default route table to allow traffic out to the internet through the NAT Gateway
     1. The default route table is used by the private subnet. So all the EC2 instances created in that subnet can access the internet but are not  accessible externally
